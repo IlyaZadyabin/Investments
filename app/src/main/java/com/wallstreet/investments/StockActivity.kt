@@ -2,6 +2,7 @@ package com.wallstreet.investments
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -15,12 +16,15 @@ import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.highlight.Highlight
+import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import com.wallstreet.investments.databinding.ActivityStockBinding
 import kotlinx.coroutines.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class StockActivity : AppCompatActivity() {
+class StockActivity : AppCompatActivity()  {
 
     private lateinit var linechart: LineChart
     private lateinit var stock : Stock
@@ -117,7 +121,7 @@ class StockActivity : AppCompatActivity() {
                     } as ArrayList<Entry>
                 }
                 drawChartFromEntries(entries)
-            } catch (e : Exception) {
+            } catch (e: Exception) {
                 val thread = Thread {
                     runOnUiThread { Toast.makeText(context, "Api error: " + e.message, Toast.LENGTH_SHORT).show() }
                 }
@@ -146,7 +150,7 @@ class StockActivity : AppCompatActivity() {
         dataset.highLightColor = R.color.black
         dataset.highlightLineWidth = 1f
         dataset.setDrawHorizontalHighlightIndicator(false)
-
+        //dataset.isHighlightEnabled = true
         val data = LineData(dataset)
 
         linechart.description.isEnabled = false
@@ -183,4 +187,5 @@ class StockActivity : AppCompatActivity() {
         linechart.invalidate()
         linechart.animateXY(300, 300)
     }
+
 }

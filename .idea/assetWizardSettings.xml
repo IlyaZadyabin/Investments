@@ -79,7 +79,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/money_off/baseline_money_off_24.xml" />
+                                                <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/money_off/baseline_money_off_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -318,7 +318,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/star_outline/baseline_star_outline_24.xml" />
+                                      <entry key="url" value="file:/$PROJECT_DIR$/../AppData/Local/Android/Sdk/icons/material/materialicons/circle/baseline_circle_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -328,7 +328,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_non_favourite_black" />
+                            <entry key="outputName" value="ic_baseline_circle_24" />
                             <entry key="sourceFile" value="C:\Users\zilya\Downloads\apple-svgrepo-com.svg" />
                           </map>
                         </option>

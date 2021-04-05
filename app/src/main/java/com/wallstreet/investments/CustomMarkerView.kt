@@ -18,6 +18,6 @@ class CustomMarkerView(context: Context, layoutResource: Int, private val stockC
     }
 
     override fun getOffsetForDrawingAtPoint(xpos: Float, ypos: Float): MPPointF {
-        return MPPointF(-width / 2f, (-height).toFloat())
+        return MPPointF(-width / 2f, (-height * 1.5).toFloat())
     }
 }
